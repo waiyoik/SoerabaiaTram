@@ -47,9 +47,17 @@
     }
 
     .ellipsis-icon::after {
-      content: '\2026'; /* Unicode for ellipsis */
-      margin-left: 5px; /* Adjust the space between the text and the icon */
+      content: '\2026'; 
+      margin-left: 5px; 
     }
+    
+    .bottom-text {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    right: 0;
+    font-size: 9px;
+}
     </style>
   </head>
   <body>
@@ -97,6 +105,9 @@
             </ul>
         </li>
     </ul>
+<div class="bottom-text">
+        <p>Source: Digital Collection, Leiden University Libraries.</p>
+    </div>
 
 </div>
     <script>
@@ -104,9 +115,10 @@
       const map = L.map('map').setView([-7.24917, 112.75083], 13);
       const mtLayer = L.maptilerLayer({
         apiKey: key,
-        style: "89bd9ce7-ae4f-4c2b-b74d-d0ef7399ebb3",
+        style: "outdoor-v2",
       }).addTo(map);
         L.control.zoom({ position: 'bottomright' }).addTo(map);
+        
 var latlngs1 = [
     [-7.198767, 112.732805],
     [-7.200139, 112.733022],
@@ -636,7 +648,7 @@ var latlngs6 = [
     
 ];
 
-var latlngs22 = [
+var latlngs7 = [
    [-7.281327, 112.745487],
     [-7.281601, 112.745656],
     [-7.281694, 112.745707],
@@ -702,12 +714,12 @@ var latlngs22 = [
     
 ];
 
-var polyline4 = L.polyline(latlngs4, {color: 'white'});
-var polyline5 = L.polyline(latlngs5, {color: 'white'});
-var polyline6 = L.polyline(latlngs6, {color: 'white'});
-var polyline22 = L.polyline(latlngs22, {color: 'white'});
+var polyline4 = L.polyline(latlngs4, {color: 'black'});
+var polyline5 = L.polyline(latlngs5, {color: 'black'});
+var polyline6 = L.polyline(latlngs6, {color: 'black'});
+var polyline7 = L.polyline(latlngs7, {color: 'black'});
 
-var polylineGroup2 = L.layerGroup([polyline4, polyline5, polyline6, polyline22]);
+var polylineGroup2 = L.layerGroup([polyline4, polyline5, polyline6, polyline7]);
 
         
 document.getElementById('subline2').addEventListener('change', function () {
@@ -718,7 +730,7 @@ document.getElementById('subline2').addEventListener('change', function () {
             }
         });
         
- var latlngs7 = [
+ var latlngs8 = [
     [-7.241931, 112.727486],
     [-7.242079, 112.727573],
     [-7.242345, 112.727806],
@@ -757,7 +769,7 @@ document.getElementById('subline2').addEventListener('change', function () {
         
 ];
 
-var latlngs8 = [
+var latlngs9 = [
     [-7.250341, 112.728305],
     [-7.249862, 112.729020],
     [-7.249234, 112.729749],
@@ -765,7 +777,7 @@ var latlngs8 = [
     [-7.246469, 112.733476],   
 ];
 
-var latlngs9 = [
+var latlngs10 = [
     [-7.250756, 112.727842],
     [-7.250340, 112.728312],
     [-7.250265, 112.728360],
@@ -786,11 +798,11 @@ var latlngs9 = [
 ];
 
 
-var polyline7 = L.polyline(latlngs7, {color: 'grey'});
 var polyline8 = L.polyline(latlngs8, {color: 'grey'});
 var polyline9 = L.polyline(latlngs9, {color: 'grey'});
+var polyline10 = L.polyline(latlngs10, {color: 'grey'});
 
-var polylineGroup3 = L.layerGroup([polyline7, polyline8, polyline9])
+var polylineGroup3 = L.layerGroup([polyline8, polyline9, polyline10])
 
 document.getElementById('subline3').addEventListener('change', function () {
             if (this.checked) {
@@ -800,7 +812,7 @@ document.getElementById('subline3').addEventListener('change', function () {
             }
         });
         
-var latlngs10 = [
+var latlngs11 = [
 	[-7.234167, 112.730685],
     [-7.234385, 112.730861],    
     [-7.234884, 112.733212],
@@ -850,7 +862,7 @@ var latlngs10 = [
     
 ];
 
-var latlngs11 = [
+var latlngs12 = [
     [-7.256970, 112.727494],
     [-7.257355, 112.729983],
     [-7.258154, 112.732634],
@@ -877,7 +889,7 @@ var latlngs11 = [
     [-7.295379, 112.739386],
 ];
 
-var latlngs12 = [
+var latlngs13 = [
     [-7.235672, 112.735318],
     [-7.235772, 112.735203],
     [-7.235798, 112.735164],
@@ -904,11 +916,11 @@ var latlngs12 = [
 ];
 
 
-var polyline10 = L.polyline(latlngs10, {color: 'pink'});
 var polyline11 = L.polyline(latlngs11, {color: 'pink'});
 var polyline12 = L.polyline(latlngs12, {color: 'pink'});
+var polyline13 = L.polyline(latlngs13, {color: 'pink'});
 
-var polylineGroup4 = L.layerGroup([polyline10, polyline11, polyline12])
+var polylineGroup4 = L.layerGroup([polyline11, polyline12, polyline13])
 
 document.getElementById('subline4').addEventListener('change', function () {
             if (this.checked) {
@@ -918,7 +930,7 @@ document.getElementById('subline4').addEventListener('change', function () {
             }
         });
         
-var latlngs13 = [
+var latlngs14 = [
     [-7.199601, 112.736213],
     [-7.201732, 112.736584],
     [-7.208899, 112.737785],
@@ -968,7 +980,7 @@ var latlngs13 = [
 	
 ];
 
-var latlngs14 = [  
+var latlngs15 = [  
     [-7.230788, 112.731680],
     [-7.230795, 112.731818],
     [-7.231123, 112.733764],
@@ -981,7 +993,7 @@ var latlngs14 = [
     
 ];
 
- var latlngs15 = [
+ var latlngs16 = [
     [-7.241931, 112.727486],
     [-7.242079, 112.727573],
     [-7.242345, 112.727806],
@@ -1020,7 +1032,7 @@ var latlngs14 = [
         
 ];
 
-var latlngs16 = [  
+var latlngs17 = [  
     [-7.262289, 112.740504],
 	[-7.262783, 112.740731],
     [-7.263728, 112.741088],
@@ -1174,12 +1186,12 @@ var latlngs16 = [
 
 ];
 
-var polyline13 = L.polyline(latlngs13, {color: 'blue'});
 var polyline14 = L.polyline(latlngs14, {color: 'blue'});
 var polyline15 = L.polyline(latlngs15, {color: 'blue'});
 var polyline16 = L.polyline(latlngs16, {color: 'blue'});
+var polyline17 = L.polyline(latlngs17, {color: 'blue'});
 
-var polylineGroup5 = L.layerGroup([polyline13, polyline14, polyline15, polyline16])
+var polylineGroup5 = L.layerGroup([polyline14, polyline15, polyline16, polyline17])
 
 document.getElementById('subline5').addEventListener('change', function () {
             if (this.checked) {
@@ -1189,16 +1201,16 @@ document.getElementById('subline5').addEventListener('change', function () {
             }
         });
         
-var latlngs17 = [  
+var latlngs18 = [  
     [-7.243139, 112.739226],
     [-7.242932, 112.739749],
     [-7.242542, 112.740198],
 
 ];
 
-var polyline17 = L.polyline(latlngs17, {color: 'green'});
+var polyline18 = L.polyline(latlngs18, {color: 'green'});
 
-var polylineGroup6 = L.layerGroup([polyline17])
+var polylineGroup6 = L.layerGroup([polyline18])
 
 document.getElementById('subline6').addEventListener('change', function () {
             if (this.checked) {
@@ -1208,7 +1220,7 @@ document.getElementById('subline6').addEventListener('change', function () {
             }
         });
         
-var latlngs18 = [  
+var latlngs19 = [  
     [-7.246469, 112.733476],
     [-7.245781, 112.734254],
     [-7.245179, 112.734853],
@@ -1231,7 +1243,7 @@ var latlngs18 = [
 
 ];
 
-var latlngs19 = [  
+var latlngs20 = [  
     [-7.243139, 112.739226],
     [-7.243381, 112.738337],
     [-7.243628, 112.737039],
@@ -1287,10 +1299,10 @@ var latlngs19 = [
        
 ];
 
-var polyline18 = L.polyline(latlngs18, {color: 'yellow'});
 var polyline19 = L.polyline(latlngs19, {color: 'yellow'});
+var polyline20 = L.polyline(latlngs20, {color: 'yellow'});
 
-var polylineGroup7 = L.layerGroup([polyline18, polyline19])
+var polylineGroup7 = L.layerGroup([polyline19, polyline20])
 
 document.getElementById('subline7').addEventListener('change', function () {
             if (this.checked) {
@@ -1300,7 +1312,7 @@ document.getElementById('subline7').addEventListener('change', function () {
             }
         });
         
-var latlngs20 = [ 
+var latlngs21 = [ 
 	[-7.298226, 112.735305],
 	[-7.298989, 112.730957],
 	[-7.300311, 112.728447],
@@ -1312,9 +1324,9 @@ var latlngs20 = [
 	[-7.306985, 112.720808],
 ];
 
-var polyline20 = L.polyline(latlngs20, {color: 'orange'});
+var polyline21 = L.polyline(latlngs21, {color: 'orange'});
 
-var polylineGroup8 = L.layerGroup([polyline20])
+var polylineGroup8 = L.layerGroup([polyline21])
 
 document.getElementById('subline8').addEventListener('change', function () {
             if (this.checked) {
@@ -1324,7 +1336,7 @@ document.getElementById('subline8').addEventListener('change', function () {
             }
         });
         
-var latlngs21 = [ 
+var latlngs22 = [ 
 	[-7.272596, 112.747790],
     [-7.272658, 112.747706],
     [-7.272904, 112.747505],
@@ -1367,9 +1379,9 @@ var latlngs21 = [
 
 ];
 
-var polyline21 = L.polyline(latlngs21, {color: 'maroon'});
+var polyline22 = L.polyline(latlngs22, {color: 'maroon'});
 
-var polylineGroup9 = L.layerGroup([polyline21])
+var polylineGroup9 = L.layerGroup([polyline22])
 
 document.getElementById('subline9').addEventListener('change', function () {
             if (this.checked) {
